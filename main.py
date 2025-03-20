@@ -3,8 +3,7 @@ import hashlib, argparse
 parser = argparse.ArgumentParser(description="sha256 identity verification tool")
 
 def hash(input_string):
-    hash_object = hashlib.sha256(input_string.encode())
-    return hash_object.hexdigest()
+    return hashlib.sha256(input_string.encode()).hexdigest()
 
 def create_master_key(passwords):
     password_list = []
